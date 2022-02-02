@@ -29,35 +29,71 @@
 }
 
 
-body{
-    margin: 0;
-    height: 100vh;
-}
 
+/* header-start */
 html{
     scroll-behavior: smooth;
 }
-  
-.headerSection{
-    color: white;
-}
+
 .tabsItems{
     background:#14202E; 
 }
 
-.headerSection .brandText{
-    font-family: RobMed;
-    font-size: 24px;
-    color: #ffffff;
-    text-decoration: none;
+
+/* extra small and small devices */
+@media (max-width: 767px){
+    .brand-link img{
+        width: 40px;
+    }    
+    .brandText{
+        font-size: 12px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .utilityItems .utility-link{
+        font-size: 12px;
+        font-family: PopReg;
+    }
+    .utilityItems{
+        display: flex;
+        justify-content: space-between;
+    }
+    .utilityItems{
+        min-width: 300px;
+    }
+    .empty-space{
+        height: 30vh;
+        background: #14202E;
+    }
 }
+
+/* Medium to all devices */
+
+@media (min-width: 768px){
+    .headerSection .brandText{
+        font-family: RobMed;
+        font-size: 24px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .utilityItems .utility-link{
+        font-size: 18px;
+        font-family: PopReg;
+    }
+    .utilityItems{
+        width: 350px;
+    }
+    .empty-space{
+        height: 22vh;
+        background: #14202E;
+    }
+}
+
 
 .headerSection .brandText:hover{
     text-decoration: none;
 }
-.headerSection .utilityItems{
-    width: 400px;
-}
+
 .brand-link{
     text-decoration: none;
 }
@@ -130,159 +166,333 @@ html{
     color: #F1AC4D;
     text-decoration: none;
 }
+/* header-end */
 
-.utilityItems .utility-link{
-    font-size: 18px;
-    font-family: PopReg;
+/* **************************************** */
+
+
+/* profile-start */
+
+@media (max-width: 767px){
+    .profile-card{
+        position: relative;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+
+    .profile-card .content{
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+    }
+    .profile-card h4{
+        font-family: PopMed;
+        font-size: 18px;
+        color: #ffffff; 
+    }
+    
+    .profile-card p{
+        font-family: PopLight;
+        font-size: 16px;
+        color: #ffffff;
+    }
+
+    .hover-card{
+        position: absolute;
+        top: 100%;
+        bottom: 0%;
+        height: 100%;
+        background: #223247;
+        transition: 0.3s ease-in;
+    }
+    .hoverProp:hover .hover-card{
+        top: 0%;
+        bottom: 0%;
+        height: 100%;
+        background: #223247;
+    }
+
+    .profile-card-hover{
+        
+        width: 100%;
+        color: white;
+    }
+
+    .hoverProp{
+        overflow: hidden;
+    }
+
+    .pop-card-hover div{
+        width: 80%;
+    }
+    
+    .pop-card-hover h2{
+        font-family: PopSemBuild;
+        font-size: 18px;
+    }
+    
+    .pop-card-hover .symText{
+        font-family: PopLight;
+        font-size: 14px;
+        color: #8695A8;
+    }
+    
+    .pop-card{
+        background: #223247;
+    }
+    .pop-card div{
+        width: 80%;
+    }
+    
+    .pop-card h2{
+        font-family: PopSemBuild;
+        font-size: 18px;
+    }
+    
+    .pop-card .symText{
+        font-family: PopLight;
+        font-size: 14px;
+        color: #8695A8;
+    }
+
+    .textCard{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .selectTag{
+        width: 60%;
+        color: #EFEEF3;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background: transparent;
+        outline: none;
+    }
+
+    /* playicon */
+    .icon-border{
+        height: 46px;
+        width: 46px;
+        background: #F1AC4D;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .icon-border-1{
+        height: 46px;
+        width: 46px;
+        background:transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .iposition{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }    
 }
 
+@media (min-width: 768px){
+    .profile-card{
+        position: relative;
+        color: white;
+        border: 1px solid white;
+    }
 
-.profile-card{
-    position: relative;
-    color: white;
-    width: 100%;
-    height: 320px;
-    /* height: 100%; */
-    border-bottom: 1px solid white;
-}
+    .profile-card .content{
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+    }
+    .profile-card h4{
+        font-family: PopMed;
+        font-size: 18px;
+        color: #ffffff; 
+    }
+    
+    .profile-card p{
+        font-family: PopLight;
+        font-size: 16px;
+        color: #ffffff;
+    }
 
-.profile-card img{
-    height: 100%;
-    width: 100%;
-}
+    .hover-card{
+        position: absolute;
+        top: 100%;
+        bottom: 0%;
+        left: 0;
+        right: 0;
+        background: #223247;
+        transition: 0.3s ease-in;
+    }
+    .hoverProp:hover .hover-card{
+        top: 0%;
+        bottom: 0%;
+        left: 0;
+        right: 0;
+        background: #223247;
+    }
 
-.profile-card .content{
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-}
+    .profile-card-hover{
+        width: 100%;
+        color: white;
+    }
 
-.profile-card-hover{
-    width: 100%;
-    color: white;
-}
+    .hoverProp{
+        overflow: hidden;
+    }
 
-.hoverProp{
-    overflow: hidden;
-}
+    .pop-card-hover div{
+        width: 80%;
+    }
+    
+    .pop-card-hover h2{
+        font-family: PopSemBuild;
+        font-size: 18px;
+    }
+    
+    .pop-card-hover .symText{
+        font-family: PopLight;
+        font-size: 14px;
+        color: #8695A8;
+    }
+    
+    .pop-card{
+        background: #223247;
+    }
+    .pop-card div{
+        width: 80%;
+    }
+    
+    .pop-card h2{
+        font-family: PopSemBuild;
+        font-size: 18px;
+    }
+    
+    .pop-card .symText{
+        font-family: PopLight;
+        font-size: 14px;
+        color: #8695A8;
+    }
 
-.hover-card{
-    position: absolute;
-    top: 100%;
-    transition: 0.3s ease-in;
-}
+    .textCard{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
 
-.hoverProp:hover .hover-card{
-    top: 0%;
+    .selectTag{
+        width: 60%;
+        color: #EFEEF3;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background: transparent;
+        outline: none;
+    }
+    /* playicon */
+    .icon-border{
+        height: 46px;
+        width: 46px;
+        background: #F1AC4D;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .icon-border-1{
+        height: 46px;
+        width: 46px;
+        background:transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .iposition{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
+/* profile-end */
+/* **************************************** */
 
-.pop-card{
-    height: 100%;
-    background: #223247;
-}
-.pop-card div{
-    width: 80%;
-}
-
-.pop-card h2{
-    font-family: PopSemBuild;
-    font-size: 28px;
-}
-
-.pop-card .symText{
-    font-family: PopLight;
-    font-size: 16px;
-    color: #8695A8;
-}
-
-.pop-card-hover{
-    height: 320px;
-    background: #223247;
-}
-
-.pop-card-hover div{
-    width: 80%;
-}
-
-.pop-card-hover h2{
-    font-family: PopSemBuild;
-    font-size: 28px;
-}
-
-.pop-card-hover .symText{
-    font-family: PopLight;
-    font-size: 16px;
-    color: #8695A8;
-}
-
+/* 
  .lastCards{
     border-bottom: none;
 }
 
 
 
-.icon-border{
-    height: 46px;
-    width: 46px;
-    background: #F1AC4D;
-    border-radius: 50%;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.icon-border-1{
-    height: 46px;
-    width: 46px;
-    background:transparent;
-    border: 1px solid white;
-    border-radius: 50%;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-
-
-.iposition{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
 .empty-space{
     height: 145px;
     background: #14202E;
 }
+ */
+/* footer-start */
+@media (max-width: 767px){
+    .linksSection{
+        height: 250px;
+    }
+    
+    .linksSection ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    footer{
+        min-height: 100vh;
+        background: #14202E;
+        color: white;
+    }       
+}
 
-.selectTag{
-    width: 80%;
-    color: #EFEEF3;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    background: transparent;
-    outline: none;
+@media (max-width: 991px){
+    .divider{
+        border-right: 1px solid #8695A8;
+        height: 0%;
+    }
+}
+
+@media (min-width: 768px){
+    .linksSection{
+        height: 250px;
+    }
+    
+    .linksSection ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    footer{
+        background: #14202E;
+        color: white;
+    }    
+}
+
+@media (min-width: 992px){
+    .divider{
+        border-right: 1px solid #8695A8;
+        height: 100%;
+    }
 }
 
 
-
-
-.profile-card h4{
-    font-family: PopMed;
-    font-size: 18px;
-    color: #ffffff; 
-}
-
-.profile-card p{
-    font-family: PopLight;
-    font-size: 16px;
-    color: #ffffff;
-}
-
-footer{
-    max-height: 100vh;
-    background: #14202E;
-    color: white;
+.divider a:hover{
+    text-decoration: none;
 }
 
 .logoText{
@@ -296,18 +506,8 @@ footer{
     font-size: 16px;
 }
 
-.divider{
-    border-right: 1px solid #8695A8;
-    height: 257px;
-}
 
-.linksSection{
-    height: 257px;
-}
 
-.linksSection ul{
-    list-style-type: none;
-}
 
 .quickLinks{
     font-family: PopLight;
@@ -316,10 +516,12 @@ footer{
 }
 .quickLinks a{
     color: #8695A8;
+    transition: 0.2s linear;
 }
 
 .quickLinks a:hover{
-    color: #8695A8;
+    /* color: #8695A8; */
+    color: white;
 }
 
 .sitelinks a{
@@ -327,10 +529,12 @@ footer{
     color: #8695A8;
     font-family: PopLight;
     font-size: 14px;
+    transition: 0.2s linear;
 }
 
 .sitelinks a:hover{
-    color: #8695A8;
+    /* color: #8695A8; */
+    color: white;
 }
 
 .contact-section input[type="text"]::placeholder{
@@ -383,4 +587,17 @@ footer{
     font-size: 14px;
     color: #8695A8;
 }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
